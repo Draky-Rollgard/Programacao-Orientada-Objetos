@@ -1,0 +1,187 @@
+AULA DIA 29/10
+
+PROFESSOR HABIB
+
+REVISÃO DE LISTA
+lista.py
+l = ['oi', 3.14, 100, [10,20]]
+
+i = 0
+while i< len(l):
+    print(l[i])
+    i+=1
+
+-- IMPRIME O elemento
+for el in l:
+    print (el)
+
+///////////////////////////////////
+l é o nome da lista
+i o índice, a posição
+el é o elemento. Ponteiro para a posição de memória
+
+i->    0    1     2      3
+l-> |'oi'| 3.14| 100| [10,20]|
+
+for i, el in enumerate(l):
+    print("elemento no indice", i, el)
+
+/////////////////////////////////////////////
+como acessar elementos da lista dentro da lista
+
+l = ['oi', 3.14, 100, [10,20]]
+
+sublista = l[3]
+print(sublista[0])
+print(sublista[1])
+
+ou
+
+print([3][0])
+print([3][0])
+
+
+////////////////////////////////////////////////////
+Dictionary ou Map (MAIS UMA TABELA HASH)
+dict
+{
+    //CADA CHAVE É UMA STRING, MAS TAMBÉM PODE SER VALOR
+    "chave1": valor, //CADA CHAVE É UMA STRING, MAS TAMBÉM PODE SER VALOR
+    "chave2": valor,
+}
+////////////////////////////////////////////////////////
+no dicionario nao tem indexação ao indice 0, diferente da lista. 
+Dicionario é indexado a partir das chaves, elas serão nosso ponto
+ de acesso
+
+d =
+{
+    "chave1": 120, 
+    "chave2": 3.4,
+    "chave3": [1,2,3,4],
+}
+
+print(d["chave1"]) #120
+
+//////////////////////////////////////////////////////////////
+pessoa = {
+    "nome": "Fulano",
+    "sobrenome": "da Silva",
+    "idade": 23,
+}
+
+print(pessoa)
+altura = float(input("Informe a altura: "))
+
+
+NOVO ELEMENTO A SER INSERIDO SEMPRE ESTARÁ NA POSIÇÃO
+Se tem dicionario e chave que não existe, usa colchete e = a variável
+
+pessoa ["altura"] = X
+
+pessoa [endereço"] = "Rua y, 123, Centro"
+
+Não há possibilidade de haver chaves duplicadas.
+Acabamos que sobrescrevendo o valor
+pessoa ["idade"] = 20
+
+pessoa =
+{
+"endereço":
+{
+    "longradouro":
+    "endereço":
+    "bairro":   
+}
+
+}
+print(pessoa)
+del pessoa["endereco"]
+print(pessoa)
+
+////////////////////////////////////////////////////////////////////
+pessoa = {
+    "nome": "Fulano",
+    "sobrenome": "da Silva",
+    "idade": 23,
+}
+del pessoa["altura"]
+
+////////////////////////////////////////////////////////
+pessoa = {
+    "nome": "Fulano",
+    "sobrenome": "da Silva",
+    "idade": 23,
+}
+
+for el in pessoa:
+    print (pessoa)
+
+for chave in pessoa:
+    print ("chave:", el, "valor:", pessoa[chave])
+
+///////////////////////////////////////////////////////////
+d =
+{
+    100: 1,
+    101: 2,
+    102: 3,
+}
+
+d =
+{
+    0: 1,
+    1: 2,
+    2: 3,
+}
+print(d[0])
+
+/////////////////////////////////////////////////////////////
+EXERCÍCIO
+
+Escreva um código em Python que, dadas duas listas, converta-as em um di-
+cionário de tal forma que os itens da primeira lista sejam chaves e os itens
+da segunda lista sejam valores do dicionário, na mesma ordem. 
+Exemplo:
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+{'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+
+transformar
+#...
+#dict:{}
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+
+
+d = 
+{
+    keys[0]: values[0],
+    keys[1]: values[1],
+    keys[2]: values[2],
+}
+
+ou
+
+
+d = 
+{
+    while i < len(keys):
+        keys[i]: values[i]     //ERRADO
+        i+= 1
+}
+
+ou
+
+while i < len(keys)
+   d[keys[i]] = values[i]     // CORRETO
+   i+= 1
+
+
+for i, chave in enumerate(keys):
+    d[chave] = values[i]
+
+print(d)
+
